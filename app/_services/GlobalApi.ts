@@ -1,7 +1,9 @@
 import request, { gql } from "graphql-request";
 
 const MASTER_URL =
-  "https://api-ap-south-1.hygraph.com/v2/clua7v3r303sr07w57m4j6343/master";
+  "https://api-ap-south-1.hygraph.com/v2/" +
+  process.env.NEXT_PUBLIC_MASTER_URL_KEY +
+  "/master";
 interface singleCategory {
   id: string;
   name: string;
