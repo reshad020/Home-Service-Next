@@ -22,20 +22,29 @@ function Header() {
   return (
     <div className="p-5 shadow-sm flex justify-between">
       <div className="flex items-center gap-16 ">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image src={Logo} alt="Logo" />
           <h1 className="text-lg font-semibold">Helpii</h1>
-        </div>
+        </Link>
         <div className="md:flex items-center gap-4 hidden">
-          <h2 className="hover:text-primary hover:scale-105 cursor-pointer">
+          <Link
+            href="/"
+            className="hover:text-primary hover:scale-105 cursor-pointer"
+          >
             Home
-          </h2>
-          <h2 className="hover:text-primary hover:scale-105 cursor-pointer">
+          </Link>
+          <Link
+            href="/search/Cleaning"
+            className="hover:text-primary hover:scale-105 cursor-pointer"
+          >
             Services
-          </h2>
-          <h2 className="hover:text-primary hover:scale-105 cursor-pointer">
-            Plans
-          </h2>
+          </Link>
+          <Link
+            href="/about-us"
+            className="hover:text-primary hover:scale-105 cursor-pointer"
+          >
+            About us
+          </Link>
         </div>
       </div>
       <div>

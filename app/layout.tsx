@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./_components/Header";
 import NextAuthSessionProvider from "./provider";
 import { Toaster } from "@/components/ui/sonner";
+import Footer from "./_components/Footer";
 
 const inter = Outfit({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           </div>
         </NextAuthSessionProvider>
       </body>
+      <Footer />
     </html>
   );
 }

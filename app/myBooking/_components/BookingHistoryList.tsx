@@ -67,7 +67,8 @@ function BookingHistoryList({
               </h2>
               <h2 className="flex gap-2 text-gray-500">
                 <Calendar className="text-primary" />
-                Service on : <span className="text-black"> {booking.date}</span>
+                Service on :{" "}
+                <span className="text-black"> {booking.date.slice(0, 10)}</span>
               </h2>
               <h2 className="flex gap-2 text-gray-500">
                 <Clock className="text-primary" />

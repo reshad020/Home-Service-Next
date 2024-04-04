@@ -31,9 +31,7 @@ function BusinessList(props: BusinessListProps) {
   const gridColumnClass = gridCols[props.grid];
   return (
     <div>
-      <h2
-        className={`text-center text-primary text-${props.titleTextSize} font-bold my-${props.titleMargin}`}
-      >
+      <h2 className={`text-center text-primary text-2xl font-bold my-6`}>
         {props.title}
       </h2>
       <div className={`md:grid ${gridColumnClass} gap-4 mx-4`}>
