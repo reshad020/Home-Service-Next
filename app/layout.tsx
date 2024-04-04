@@ -22,14 +22,16 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
         <NextAuthSessionProvider>
-          <div className="mx-2 md:mx-6">
-            <Toaster />
-            <Header />
-            {children}
+          <div className="flex flex-col justify-end">
+            <div className="mx-2 md:mx-6 min-h-[100vh]">
+              <Toaster />
+              <Header />
+              {children}
+            </div>
+            <Footer />
           </div>
         </NextAuthSessionProvider>
       </body>
-      <Footer />
     </html>
   );
 }
