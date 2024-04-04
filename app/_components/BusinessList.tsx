@@ -19,8 +19,16 @@ interface BusinessListProps {
   titleTextSize: string;
   titleMargin: string;
 }
+const gridCols: any = {
+  1: "grid-cols-1",
+  2: "grid-cols-2",
+  3: "grid-cols-3",
+  4: "grid-cols-4",
+  // ... up to the max number you support
+};
 
 function BusinessList(props: BusinessListProps) {
+  const gridColumnClass = gridCols[props.grid];
   return (
     <div>
       <h2
@@ -28,7 +36,7 @@ function BusinessList(props: BusinessListProps) {
       >
         {props.title}
       </h2>
-      <div className={`md:grid grid-cols-${props.grid} gap-4 mx-4`}>
+      <div className={`md:grid ${gridColumnClass} gap-4 mx-4`}>
         {props.list.map((item) => (
           <Link
             href={"/details/" + item.id}
